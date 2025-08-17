@@ -21,15 +21,7 @@
   <meta name="author" content="HENSHAW's PERFECTKLEEN">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
   <style>
-/* Spinner animation */
-.spinner {
-  border: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid #00cc99; /* Blue */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -559,9 +551,6 @@ color:black;
   </style>
 </head>
 <body>
-<div id="loader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center">
-<div class="spinner"></div>
-</div>
 <button id=theme-toggle onclick=toggleTheme() style="position:fixed;bottom:400px;right:20px;background:#333;color:#fff;border:none;padding:10px 12px;border-radius:50%;z-index:999">
 <i class="fas fa-moon"></i>
 </button>
@@ -1010,16 +999,6 @@ function closeModal() {
 function switchForm(type) {
   openModal(type);
 }
-
-  // Loader fade-out after page fully loads
-  window.addEventListener("load", function() {
-    setTimeout(() => {
-      document.getElementById("loader").classList.add("fade-out");
-      setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
-      }, 500); // Wait for fade animation to finish
-    }, 1000); // Delay before fade-out starts
-  });
 
 
 // Testimonials Slider
